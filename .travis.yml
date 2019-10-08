@@ -7,8 +7,8 @@ branches:
   only:
     - master # build master branch only
 before_script:
-  git config user.name yqhui
-  git config user.email hui@jser.one
+  - git config user.name yqhui
+  - git config user.email hui@jser.one
 script:
   - hexo generate # generate static files
 deploy:
