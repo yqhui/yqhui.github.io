@@ -1,0 +1,21 @@
+sudo: false
+language: node_js
+node_js:
+  - 10 # use nodejs v10 LTS
+cache: npm
+branches:
+  only:
+    - master # build master branch only
+before_script:
+  git config user.name yqhui
+  git config user.email hui@jser.one
+script:
+  - hexo generate # generate static files
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $ACCESS_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: public
