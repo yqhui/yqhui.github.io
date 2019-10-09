@@ -6,9 +6,9 @@ cache: npm
 branches:
   only:
     - blog # build master branch only
-before_script:
-  - git config user.name yqhui
-  - git config user.email hui@jser.one
+before_install:
+  - npm install -g hexo-cli
+  - npm install
 script:
   - hexo generate # generate static files
 deploy:
