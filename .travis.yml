@@ -5,7 +5,7 @@ node_js:
 cache: npm
 branches:
   only:
-    - master # build master branch only
+    - blog # build master branch only
 before_script:
   - git config user.name yqhui
   - git config user.email hui@jser.one
@@ -17,5 +17,5 @@ deploy:
   github-token: $ACCESS_TOKEN
   keep-history: true
   on:
-    branch: master
+    branch: blog
   local-dir: public
