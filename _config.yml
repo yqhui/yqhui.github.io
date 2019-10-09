@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 耶加有点酸
-subtitle:
-description:
-keywords:
+title: Hui’s Blog
+subtitle: 一枚小前端的折腾记
+description: 前端博客
+keywords: font-end, jser, react, javascript
 author: yqhui
-language: zh
+language: zh-CN
 timezone:
 
 # URL

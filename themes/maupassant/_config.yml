@@ -70,9 +70,6 @@ menu:
   - page: about
     directory: about/
     icon: fa-user
-  - page: rss
-    directory: atom.xml
-    icon: fa-rss
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - search
@@ -80,7 +77,6 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - tag
   - recent_posts
   - recent_comments
-  - links
 
 links:
   - title: site-name1
@@ -103,6 +99,9 @@ timeline:
 # Static files
 js: js
 css: css
+
+# 启用数学公式
+mathjax: true
 
 # Theme version
 version: 0.0.0
