@@ -16,6 +16,7 @@ deploy:
   skip-cleanup: true
   github-token: $ACCESS_TOKEN
   keep-history: true
+  target_branch: master
   on:
     branch: blog
   local-dir: public
