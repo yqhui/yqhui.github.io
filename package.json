@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate"
+    "clean": "yuque-hexo clean & hexo clean",
+    "build": "yuque-hexo sync && hexo generate"
   },
   "hexo": {
     "version": "3.9.0"
@@ -21,5 +22,19 @@
     "hexo-renderer-sass": "^0.4.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3"
+  },
+  "yuqueConfig": {
+    "postPath": "source/_posts/yuque",
+    "cachePath": "yuque.json",
+    "mdNameFormat": "title",
+    "adapter": "hexo",
+    "concurrency": 5,
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "yqhui",
+    "repo": "blog",
+    "onlyPublished": true
+  },
+  "devDependencies": {
+    "yuque-hexo": "^1.6.2"
   }
 }
