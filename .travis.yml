@@ -18,7 +18,7 @@ script:
 addons:
   ssh_known_hosts: 47.240.58.4
 after_success:
-- scp -i ~/.ssh/id_rsa_aliyun -r public/ root@47.240.58.4:/var/www/blog/
+- scp -i ~/.ssh/id_rsa_aliyun -r public/* root@47.240.58.4:/var/www/blog/
 deploy:
   provider: pages
   skip-cleanup: true
