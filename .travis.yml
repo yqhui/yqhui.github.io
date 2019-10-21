@@ -8,8 +8,8 @@ branches:
   - blog
 before_install:
 - openssl aes-256-cbc -K $encrypted_78743156399e_key -iv $encrypted_78743156399e_iv
-  -in id_rsa_aliyun.enc -out ~\/.ssh/id_rsa_aliyun -d
-- chmod 600 ~\/.ssh/id_rsa_aliyun
+  -in id_rsa_aliyun.enc -out ~/.ssh/id_rsa_aliyun -d
+- chmod 600 ~/.ssh/id_rsa_aliyun
 - npm install -g hexo-cli
 - npm install
 script:
