@@ -15,8 +15,10 @@ before_install:
 script:
 - npm run clean
 - npm run build
+addons:
+  ssh_known_hosts: 47.240.58.4
 after_success:
-- scp -o StrictHostKeyChecking=no -r public/ root@47.240.58.4:/var/www/blog/
+- scp -r public/ root@47.240.58.4:/var/www/blog/
 deploy:
   provider: pages
   skip-cleanup: true
