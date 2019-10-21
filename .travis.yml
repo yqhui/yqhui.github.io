@@ -1,21 +1,26 @@
 sudo: false
 language: node_js
 node_js:
-  - 10 # use nodejs v10 LTS
+- 10
 cache: npm
 branches:
   only:
-    - blog # build master branch only
+  - blog
 before_install:
-  - npm install -g hexo-cli
-  - npm install
+- openssl aes-256-cbc -K $encrypted_78743156399e_key -iv $encrypted_78743156399e_iv
+  -in id_rsa_aliyun.enc -out ~\/.ssh/id_rsa_aliyun -d
+- chmod 600 ~\/.ssh/id_rsa_aliyun
+- npm install -g hexo-cli
+- npm install
 script:
-  - npm run clean
-  - npm run build
+- npm run clean
+- npm run build
+after_success:
+- scp -o StrictHostKeyChecking=no -r public/ root@47.240.58.4:/var/www/blog/
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $ACCESS_TOKEN
+  github-token: "$ACCESS_TOKEN"
   keep-history: true
   target-branch: master
   on:
