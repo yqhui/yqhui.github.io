@@ -18,7 +18,7 @@ script:
 addons:
   ssh_known_hosts: 192.69.94.135
 after_success:
-- scp -P 29019 -i ~/.ssh/id_rsa_aliyun -r public/* root@192.69.94.135:/var/www/blog/
+- scp -o StrictHostKeyChecking=no -P 29019 -i ~/.ssh/id_rsa_aliyun -r public/* root@192.69.94.135:/var/www/blog/
 deploy:
   provider: pages
   skip-cleanup: true
